@@ -6,11 +6,12 @@ La aplicación permite visualizar el proceso de transformación de datos paso a 
 
 ## 🚀 Características
 
-La aplicación se divide en tres secciones principales:
+La aplicación se divide en cuatro secciones principales:
 
 1.  **🏠 Inicio:** Una página de bienvenida que introduce el proyecto.
 2.  **1️⃣ Limpieza:** Un dashboard que muestra el "antes" y el "después" de cada paso del proceso de limpieza de datos. Permite descargar el dataset limpio (`.csv`) una vez procesado.
 3.  **2️⃣ Análisis:** Un dashboard que presenta varias métricas y análisis sobre los datos ya limpios, como estadísticas descriptivas, distribuciones por año, precios medios, etc.
+4.  **3️⃣ EDA:** Una página dedicada al Análisis Exploratorio de Datos (EDA) con visualizaciones interactivas, incluyendo un mapa de correlación.
 
 ## 📂 Estructura del Proyecto
 
@@ -21,7 +22,8 @@ La aplicación se divide en tres secciones principales:
 │   └── coches_segunda_mano_limpio.csv    # Dataset generado por el script/app
 ├── pages/
 │   ├── 1_Limpieza.py                     # Script de la página de limpieza
-│   └── 2_Análisis.py                     # Script de la página de análisis
+│   ├── 2_Análisis.py                     # Script de la página de análisis
+│   └── 3_EDA.py                          # Script de la página de EDA
 ├── scripts/
 │   ├── analisis.py                       # Script original de análisis (no interactivo)
 │   └── limpieza.py                       # Script original de limpieza (no interactivo)

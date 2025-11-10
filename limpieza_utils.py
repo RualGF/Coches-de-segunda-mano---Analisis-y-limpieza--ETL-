@@ -16,7 +16,7 @@ def limpiar_deposito_co2(df_entrada):
     df["deposito"] = pd.to_numeric(df["deposito"].str.replace(",", ".", regex=False), errors="coerce")
     df["co2"] = pd.to_numeric(df["co2"].str.replace(",", ".", regex=False), errors="coerce")
     if df["co2"].isnull().any():
-        df["co2"].fillna(round(df["co2"].mean(), 2), inplace=True)
+        df["co2"] = df["co2"].fillna(round(df["co2"].mean(), 2))
     return df
 
 def separar_fecha(df_entrada):
@@ -34,7 +34,7 @@ def limpiar_garantia(df_entrada):
     df["garantia"] = df["garantia"].replace({"Sí": np.nan, "No": "0"})
     df["garantia"] = pd.to_numeric(df["garantia"], errors="coerce")
     if df["garantia"].isnull().any():
-        df["garantia"].fillna(round(df["garantia"].mean(), 2), inplace=True)
+        df["garantia"] = df["garantia"].fillna(round(df["garantia"].mean(), 2))
     return df
 
 def limpiar_dataframe_completo(df_entrada):
